@@ -24,7 +24,7 @@
         android:layout_height="602dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        tools:listitem="@layout/sample_login" />
+        tools:listitem="@layout/samplelogin" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"

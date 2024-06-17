@@ -10,9 +10,10 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.Assignment.Model.UserModel
-import com.example.Assignment.R
-import com.example.userauthentication.ui.UpdateUserActivity
+import com.example.assignment.R
+
+import com.example.assignment.ui.UpdateUserActivity
+import com.example.userauthentication.Model.UserModel
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import java.lang.Exception
@@ -30,7 +31,7 @@ class UserAdapter(var context: Context,var data:ArrayList<UserModel>): RecyclerV
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.sample_login,parent,false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.samplelogin,parent,false)
         return  UserViewHolder(view)
     }
 
