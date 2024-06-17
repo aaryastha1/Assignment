@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Assignment"
         tools:targetApi="31">
         <activity
+            android:name=".ui.UpdateUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".registrationActivity"
             android:exported="false" />
         <activity
