@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
 
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
-        setContentView(R.layout.activity_login)
+
 
         val repo = UserRepositoryImpl()
         userViewModel = UserViewModel(repo)
