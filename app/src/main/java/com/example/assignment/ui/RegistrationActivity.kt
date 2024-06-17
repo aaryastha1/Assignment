@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.assignment.R
 import com.example.assignment.databinding.ActivityRegistration2Binding
 import com.example.userauthentication.Model.UserModel
+import com.example.userauthentication.Repository.UserRepositoryImpl
 import com.example.userauthentication.Utils.ImageUtils
 import com.example.userauthentication.ViewModel.UserViewModel
 import com.squareup.picasso.Picasso
@@ -32,6 +33,9 @@ class RegistrationActivity : AppCompatActivity() {
         registrationBinding = ActivityRegistration2Binding.inflate(layoutInflater)
         setContentView(registrationBinding.root)
 
+        val repo = UserRepositoryImpl()
+        userViewmodel = UserViewModel(repo)
+
         imageUtils = ImageUtils(this)
         imageUtils.registerActivity { url ->
             url.let {
@@ -40,17 +44,17 @@ class RegistrationActivity : AppCompatActivity() {
             }
         }
 
-        //      registrationBinding.imagebrowse.setOnClickListener{
-//            imageUtils.launchGallery(this)
-//        }
-//        registrationBinding.save.setOnClickListener {
-//            if (imageUri != null){
-//                uploadImage()
-//            }else{
-//                Toast.makeText(applicationContext,"Please upload image first",Toast.LENGTH_LONG)
-//                    .show()
-//            }
-//        }
+              registrationBinding.imagebrowse.setOnClickListener{
+            imageUtils.launchGallery(this)
+        }
+        registrationBinding.buttonregister2.setOnClickListener {
+            if (imageUri != null){
+                uploadImage()
+            }else{
+                Toast.makeText(applicationContext,"Please upload image first",Toast.LENGTH_LONG)
+                    .show()
+            }
+        }
 
         registrationBinding.buttonregister2.setOnClickListener {
             var name : String = registrationBinding.editname.text.toString()
